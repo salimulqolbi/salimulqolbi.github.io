@@ -1,0 +1,33 @@
+.navbar {
+  background-color: #553300;
+}
+
+.jumbotron {
+  padding-top: 7rem;
+  background-color: #D2B48C;
+}
+
+#skills {
+  background-color: #D2B48C;
+}
+
+footer {
+  background-color: #D2B48C;
+}
+
+section {
+  padding-top: 6rem;
+}
+
+#profile {
+  background-color: #D2B48C;
+}
+
+#mywork {
+  background-color: #D2B48C;
+}
+
+.about-me {
+  display: grid; 
+  grid-template-columns: 1fr 10px 1fr;
+}
