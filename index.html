@@ -11,6 +11,9 @@
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css" />
 
+    <!-- AOS CSS -->
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+
     <!-- My CSS -->
     <link rel="stylesheet" href="style.css" />
 
@@ -51,7 +54,7 @@
     <section class="jumbotron text-center">
       <img src="img/My Picture.jpg" alt="Muhamad Salimul Qolbi" width="180" class="rounded-circle img-thumbnail" />
       <h1 class="display-4">Muhamad Salimul Qolbi</h1>
-      <p class="lead">Student</p>
+      <p class="lead"></p>
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
         <path
           fill="#ffffff"
@@ -71,8 +74,14 @@
           </div>
         </div>
         <div class="row justify-content-center fs-5 text-center">
-          <div class="col-md-4">
-            <p>Nama saya Muhamad Salimul Qolbi. saya berumur 16 tahun, lulusan SMP Negeri 21 Semarang. Saya mudah beradaptasi, dapat bekerja sama dalam tim, dan sangat senang dalam mempelajari hal baru</p>
+          <div class="col-md-4" data-aos="fade-right" data-aos-duration="1000">
+            <p>Nama saya Muhamad Salimul Qolbi. saya berumur 16 tahun, lulusan SMP Negeri 21 Semarang tahun ajaran 2021/2022. Saya mudah beradaptasi, dapat bekerja sama dalam tim, dan sangat senang dalam mempelajari hal baru.</p>
+          </div>
+          <div class="col-md-4" data-aos="fade-left" data-aos-duration="1000" data-aos-delay="250">
+            <p>
+              Untuk sekarang saya masih berada di bangku kelas 10 SMK. Tepatnya di SMKN 7 Semarang atau yang biasa di sebut sebagai STM Pembangunan Semarang. Di sekolah tersebut saya mengambil Jurusan TKJT yang berarti Teknik Komputer
+              Jaringan dan Telekomunikasi.
+            </p>
           </div>
         </div>
       </div>
@@ -96,7 +105,7 @@
         </div>
         <div class="row justify-content-center">
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500">
               <img src="img/skills/Skills 1.jpg" class="card-img-top" alt="skills 1" />
               <div class="card-body">
                 <p class="card-text fs-1">••••••</p>
@@ -106,7 +115,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="150">
               <img src="img/skills/Skills 2.jpg" class="card-img-top" alt="skills 2" />
               <div class="card-body">
                 <p class="card-text fs-1">••••</p>
@@ -116,7 +125,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="300">
               <img src="img/skills/Skills 3.jpg" class="card-img-top" alt="skills 3" />
               <div class="card-body">
                 <p class="card-text fs-1">•••••</p>
@@ -126,7 +135,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="450">
               <img src="img/skills/Skills 4.png" class="card-img-top" alt="skills 4" />
               <div class="card-body">
                 <p class="card-text fs-1">•••••</p>
@@ -136,7 +145,7 @@
             </div>
           </div>
           <div class="col-md-4 mb-3">
-            <div class="card">
+            <div class="card" data-aos="flip-left" data-aos-duration="500" data-aos-delay="600">
               <img src="img/skills/Skills 5.png" class="card-img-top" alt="skills 5" />
               <div class="card-body">
                 <p class="card-text fs-1">••••</p>
@@ -214,8 +223,25 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
     <script>
-      const scriptURL = 'https://script.google.com/macros/s/AKfycbxtRStpoBut2y9TizuH7XPZNXbi48rO3eCzX_yGCZalSg3OCCRJFFwVdXkqCb-8arhf/exec';
+      AOS.init({
+        once: true,
+      });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.10.3/TextPlugin.min.js"></script>
+    <script>
+      gsap.registerPlugin(TextPlugin);
+      gsap.to('.lead', { duration: 1.2, delay: 1.5, text: 'Student' });
+      gsap.from('.jumbotron img', { duration: 1, rotateY: 360, opacity: 0 });
+      gsap.from('.navbar', { duration: 1.5, y: '-100%', opacity: 0, ease: 'bounce' });
+      gsap.from('.display-4', { duration: 1, x: -90, delay: 0.5, opacity: 0, ease: 'back' });
+    </script>
+
+    <script>
+      const scriptURL = ' https://script.google.com/macros/s/AKfycbxtRStpoBut2y9TizuH7XPZNXbi48rO3eCzX_yGCZalSg3OCCRJFFwVdXkqCb-8arhf/exec';
       const form = document.forms['wpu-contact-form'];
       const btnKirim = document.querySelector('.btn-kirim');
       const btnLoading = document.querySelector('.btn-loading');

@@ -4,15 +4,15 @@
 
 .jumbotron {
   padding-top: 7rem;
-  background-color: #D2B48C;
+  background-color: #d2b48c;
 }
 
 #skills {
-  background-color: #D2B48C;
+  background-color: #d2b48c;
 }
 
 footer {
-  background-color: #D2B48C;
+  background-color: #d2b48c;
 }
 
 section {
@@ -20,14 +20,26 @@ section {
 }
 
 #profile {
-  background-color: #D2B48C;
+  background-color: #ffffff;
+}
+
+#education {
+  background-color: #d2b48c;
 }
 
 #mywork {
-  background-color: #D2B48C;
+  background-color: #ffffff;
+}
+
+#certificate {
+  background-color: #d2b48c;
+}
+
+.footer {
+  background-color: #ffffff;
 }
 
 .about-me {
-  display: grid; 
+  display: grid;
   grid-template-columns: 1fr 10px 1fr;
 }
